@@ -25,6 +25,11 @@
             <div class="admin_menu">
                 {% include 'adminapp/includes/inc_menu.html' %}
             </div>
+            <span>
+            {% if basket %}
+                {{ basket.0.total_cost|floatformat:0 }} руб ({{ basket.0.total_quantity }} шт)
+            {% endif %}
+            </span>
         {% endblock %}
         
         
